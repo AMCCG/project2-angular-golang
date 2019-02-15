@@ -1,0 +1,106 @@
+@import '~src/assets/style/styles-shared';
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .box-left {
+        background-color: $blue;
+        width: 100%;
+        .wrapper-box-left {
+            .box-header {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                p {
+                    color: $white;
+                    font-weight: normal;
+                    font-size: 14px;
+                    padding: 10px 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .box-right {
+        background-color: var(--gray-light3);
+        display: flex;
+        flex: 1 0 100%;
+        justify-content: center;
+        padding: 32px;
+        .wrapper-box-right {
+            display: flex;
+            flex: 1 0 auto;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 320px;
+            .box-body {
+                .login-space {
+                    position: relative;
+                    text-align: center;
+                    .line {
+                        position: absolute;
+                        background-color: $grey;
+                        height: 1px;
+                        left: 0;
+                        right: 0;
+                        top: 50%;
+                    }
+                    div {
+                        background-color: $white;
+                        display: inline-block;
+                        font-size: 12px;
+                        padding: 0 10px;
+                        position: relative;
+                    }
+                }
+                .login-form {
+                    display: flex;
+                    form {
+                        width: 100%;
+                    }
+                    .wrapper-form-input {
+                        div {
+                            padding: 10px 0;
+                            display: flex;
+                            input {
+                                background-color: $white;
+                                padding: 10px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .wrapper-form-button {
+                        align-content: center;
+                        display: flex;
+                        justify-content: space-between;
+                        .forgot-password {
+                            color: $blue;
+                            cursor: pointer;
+                            font-size: 12px;
+                        }
+                        .submit {
+                            button {
+                                background-color: $blue;
+                                border: none;
+                                border-radius: 2px;
+                                cursor: pointer;
+                                color: $white;
+                                font-weight: bold;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .box-footer {
+                list-style: none;
+                padding: 0;
+                text-align: center;
+                li {
+                    display: inline-block;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
