@@ -1,11 +1,25 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { AppAuthenticationComponent } from './modules/app-authentication/app-authentication.component';
+import { AppManagementModule } from './modules/app-management/app-management.module';
+import { ShareModule } from './modules/share-modules/share.module';
+import { AppRouting } from './route/app-routing.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        AppAuthenticationComponent
+      ],
+      imports: [
+        AppRouting,
+        AppManagementModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        ShareModule,
       ],
     }).compileComponents();
   }));
@@ -16,16 +30,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-frontend'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('angular-frontend');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angular-frontend!');
-  });
 });

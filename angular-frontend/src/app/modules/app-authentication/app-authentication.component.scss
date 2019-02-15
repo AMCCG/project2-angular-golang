@@ -104,3 +104,11 @@
         }
     }
 }
+@media screen and (min-width:1080px){
+    .container{
+        flex-direction: row;
+        .box-right{
+            flex: 1 0 320px;
+        }
+    }
+}

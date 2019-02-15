@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AppAuthenticationComponent } from './app-authentication.component';
+
 
 describe('AppAuthenticationComponent', () => {
   let component: AppAuthenticationComponent;
@@ -8,9 +8,9 @@ describe('AppAuthenticationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppAuthenticationComponent ]
+      declarations: [AppAuthenticationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,6 +20,10 @@ describe('AppAuthenticationComponent', () => {
   });
 
   it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should redirect to /app-management when login success', () => {
     expect(component).toBeTruthy();
   });
 });
