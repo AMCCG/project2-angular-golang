@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { AppAuthenticationComponent } from '../modules/app-authentication/app-authentication.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'app-management', loadChildren: 'src/app/modules/app-management/app-management.module#AppManagementModule' },
+  { path: 'management', loadChildren: 'src/app/modules/app-management/app-management.module#AppManagementModule' },
   { path: 'login', component: AppAuthenticationComponent },
 ];
 

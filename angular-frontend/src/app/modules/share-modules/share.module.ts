@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularMerterialModule } from 'src/app/third_party/angular-meterial/angular-merterial.module';
 
 @NgModule({
@@ -8,11 +8,13 @@ import { AngularMerterialModule } from 'src/app/third_party/angular-meterial/ang
     AngularMerterialModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     AngularMerterialModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ShareModule { }

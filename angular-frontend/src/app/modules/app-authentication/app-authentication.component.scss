@@ -67,6 +67,16 @@
                                 padding: 10px;
                                 width: 100%;
                             }
+                            .alert {
+                                background-color: #FFF1F0;
+                                color: $red;
+                                width: 100% ;
+                                div {
+                                    font-size: 12px;
+                                    margin: auto;
+                                    padding: 0;
+                                }
+                            }
                         }
                     }
                     .wrapper-form-button {
@@ -104,10 +114,11 @@
         }
     }
 }
-@media screen and (min-width:1080px){
-    .container{
+
+@media screen and (min-width:1080px) {
+    .container {
         flex-direction: row;
-        .box-right{
+        .box-right {
             flex: 1 0 320px;
         }
     }

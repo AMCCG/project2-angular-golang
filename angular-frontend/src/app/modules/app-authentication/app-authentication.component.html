@@ -20,21 +20,30 @@
               <div>or</div>
             </div>
             <div class="login-form">
-              <form action="">
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="wrapper-form-input">
                   <div>
-                    <input type="text" placeholder="Email or Username">
+                    <input type="text" formControlName="username" placeholder="Email or Username">
                   </div>
                   <div>
-                    <input type="password" placeholder="Password">
+                    <input type="password" formControlName="password" placeholder="Password">
                   </div>
+                  <ng-container *ngIf="getAlertForm()">
+                    <div>
+                      <div class="alert">
+                        <div>
+                          Your email or password were incorrect.
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
                 </div>
                 <div class="wrapper-form-button">
                   <div class="forgot-password">
                     <p>Forgot password?</p>
                   </div>
                   <div class="submit">
-                    <button>Sign In</button>
+                    <button [disabled]="!loginForm.valid">Sign In</button>
                   </div>
                 </div>
               </form>
