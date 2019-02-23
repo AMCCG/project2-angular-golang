@@ -5,7 +5,7 @@ import { LayoutModule } from './app-layout/layout.module';
 import { AppManagementComponent } from './app-management/app-management.component';
 
 const routes: Routes = [
-  { path: '', component: AppManagementComponent },
+  { path: '', component: AppManagementComponent},
 ];
 
 @NgModule({

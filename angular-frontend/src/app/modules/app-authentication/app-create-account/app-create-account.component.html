@@ -1,0 +1,56 @@
+<section>
+  <div class="wrapper-box-right">
+    <div class="box-form">
+      <div class="box-header">
+        <p>Create New Account</p>
+      </div>
+      <div class="box-body">
+        <div class="login-page">
+          <div class="login-form">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="wrapper-form-input">
+                <div>
+                  <input type="text" formControlName="username" placeholder="Email or Username">
+                </div>
+                <div>
+                  <input type="password" formControlName="password" placeholder="Password">
+                </div>
+                <ng-container *ngIf="getAlertForm()">
+                  <div>
+                    <div class="alert">
+                      <div>
+                        Your email or password were incorrect.
+                      </div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+              <div class="wrapper-form-button">
+                <div class="submit">
+                  <button [disabled]="!registerForm.valid">Register</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="box-footer">
+        <a (click)="goToLogin()">
+          Login
+          <svg alt="Right"
+            class="icon-small-5Pu5KNJjmwr icon-icon-3WRRs0Iwmwr icon-small-compact-1gQrCmQWmwr icon-blue-2Ct30NTqmwr"
+            aria-hidden="true" width="20" height="20" viewBox="0 0 20 20">
+            <path d="M6.79 5.404l.694-.72 5.446 5.26-5.26 5.446-.72-.694 4.566-4.727" fill-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="box-service">
+      <div class="">
+        <ul class="p-0">
+          <li>© 2019 AMCCG</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

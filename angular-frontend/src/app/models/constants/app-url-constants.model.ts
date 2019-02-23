@@ -7,6 +7,10 @@ export class AppURLConstants {
         appManageMent: {
             key: 'app-management',
             path: 'management',
-        }
+        },
+        appCreateAccountComponent: {
+            key: 'app-create-account',
+            path: 'create-account',
+        },
     }
 }

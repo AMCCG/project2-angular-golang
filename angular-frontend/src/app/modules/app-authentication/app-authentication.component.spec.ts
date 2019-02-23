@@ -1,8 +1,9 @@
-import { Location } from "@angular/common";
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Router } from '@angular/router';
+import { AppRouting } from 'src/app/route/app-routing.module';
 import { ShareModule } from '../share-modules/share.module';
 import { AppAuthenticationComponent } from './app-authentication.component';
+import { AppCreateAccountComponent } from './app-create-account/app-create-account.component';
+import { AppLoginComponent } from './app-login/app-login.component';
 
 describe('AppAuthenticationComponent', () => {
   let component: AppAuthenticationComponent;
@@ -15,13 +16,13 @@ describe('AppAuthenticationComponent', () => {
   };
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppAuthenticationComponent],
-      providers: [
-        { provide: Router, useValue: mockRouter },
-        { provide: Location, useValue: mockLocation },
-      ],
+      declarations: [
+        AppAuthenticationComponent,
+        AppCreateAccountComponent,
+        AppLoginComponent],
       imports: [
-        ShareModule
+        AppRouting,
+        ShareModule,
       ]
     }).compileComponents();
   }));
@@ -36,20 +37,6 @@ describe('AppAuthenticationComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should redirect to /app-management when login success', () => {
-    component.ngOnInit()
-    component['loginForm'].get('username').setValue("apisit")
-    component['loginForm'].get('password').setValue("password")
-    component.onSubmit()
-    fixture.detectChanges()
-    expect(mockRouter.navigate).toHaveBeenCalledWith(['management']);
-  });
 
-  it('should show alert message when login failed', () => {
-    component.onSubmit()
-    fixture.detectChanges()
-    let message = fixture.nativeElement.querySelector(".alert div").innerHTML
-    expect(message).toEqual(" Your email or password were incorrect. ")
-  });
 
 });

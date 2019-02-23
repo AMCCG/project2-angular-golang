@@ -22,6 +22,9 @@ export class AppNavigateService {
       case AppURLConstants.URL.appManageMent.key:
         navigate = AppURLConstants.URL.appManageMent.path
         break
+      case AppURLConstants.URL.appCreateAccountComponent.key:
+        navigate = AppURLConstants.URL.appCreateAccountComponent.path
+        break
       default:
         break
     }

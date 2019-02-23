@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { RouterTestingModule } from "@angular/router/testing";
 import { AppURLConstants } from '../models/constants/app-url-constants.model';
 import { AppAuthenticationComponent } from '../modules/app-authentication/app-authentication.component';
+import { AppAuthenticationModule } from '../modules/app-authentication/app-authentication.module';
+import { ShareModule } from '../modules/share-modules/share.module';
 import { AppNavigateService } from './app-navigate.service';
 import { appRoutes } from './app-routing.module';
-import { ShareModule } from '../modules/share-modules/share.module';
 
 
 describe('Router', () => {
@@ -17,11 +18,11 @@ describe('Router', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppAuthenticationComponent
       ],
       imports: [
         RouterTestingModule.withRoutes(appRoutes),
-        ShareModule
+        ShareModule,
+        AppAuthenticationModule
       ],
     })
     router = TestBed.get(Router);
@@ -69,6 +70,11 @@ describe('AppNavigateService', () => {
   it('should goTo AppAuthenticationComponent when url == "app-management" ', () => {
     service.goTo(AppURLConstants.URL.appManageMent.key);
     expect(mockRouter.navigate).toHaveBeenCalledWith(['management']);
+  });
+
+  it('should goTo appCreateAccountComponent when  url == "app-create-account" ', () => {
+    service.goTo(AppURLConstants.URL.appCreateAccountComponent.key);
+    expect(mockRouter.navigate).toHaveBeenCalledWith(['create-account']);
   });
 
 });
