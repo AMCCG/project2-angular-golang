@@ -51,7 +51,7 @@ export class AppLoginComponent implements OnInit {
       this.loginForm.get('username').value &&
       this.loginForm.get('password').value
     ) {
-      this._appNavigate.goTo(AppURLConstants.URL.appManageMent.key)
+      // this._appNavigate.goTo(AppURLConstants.URL.appManageMent.key)
     } else {
       this._alertForm = true
     }

@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppAuthenticationComponent } from './modules/app-authentication/app-authentication.component';
-import { AppManagementModule } from './modules/app-management/app-management.module';
 import { ShareModule } from './modules/share-modules/share.module';
 import { AppRouting } from './route/app-routing.module';
 
@@ -16,7 +15,6 @@ describe('AppComponent', () => {
       ],
       imports: [
         AppRouting,
-        AppManagementModule,
         BrowserModule,
         BrowserAnimationsModule,
         ShareModule,

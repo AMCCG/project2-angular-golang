@@ -67,11 +67,6 @@ describe('AppNavigateService', () => {
     expect(mockRouter.navigate).toHaveBeenCalledWith(['login']);
   });
 
-  it('should goTo AppAuthenticationComponent when url == "app-management" ', () => {
-    service.goTo(AppURLConstants.URL.appManageMent.key);
-    expect(mockRouter.navigate).toHaveBeenCalledWith(['management']);
-  });
-
   it('should goTo appCreateAccountComponent when  url == "app-create-account" ', () => {
     service.goTo(AppURLConstants.URL.appCreateAccountComponent.key);
     expect(mockRouter.navigate).toHaveBeenCalledWith(['create-account']);

@@ -37,15 +37,6 @@ describe('AppLoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should redirect to /app-management when login success', () => {
-    component.ngOnInit()
-    component['loginForm'].get('username').setValue("apisit")
-    component['loginForm'].get('password').setValue("password")
-    component.onSubmit()
-    fixture.detectChanges()
-    expect(mockRouter.navigate).toHaveBeenCalledWith(['management']);
-  });
-
   it('should show alert message when login failed', () => {
     component.onSubmit()
     fixture.detectChanges()

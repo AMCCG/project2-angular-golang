@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ShareModule } from '../share-modules/share.module';
 import { AppAuthenticationComponent } from './app-authentication.component';
-import { AppCreateAccountComponent } from './app-create-account/app-create-account.component';
 import { AppLoginComponent } from './app-login/app-login.component';
 
 const routes: Routes = [
@@ -13,7 +12,6 @@ const routes: Routes = [
   {
     path: '', component: AppAuthenticationComponent, children: [
       { path: 'login', component: AppLoginComponent },
-      { path: 'create-account', component: AppCreateAccountComponent },
     ]
   },
 ];
@@ -21,7 +19,6 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppAuthenticationComponent,
-    AppCreateAccountComponent,
     AppLoginComponent,
   ],
   imports: [
