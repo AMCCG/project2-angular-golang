@@ -1,18 +1,29 @@
 $white: #fff;
+$dark-blue: #005AA2;
 $blue: #006fc8;
+$soft-blue:rgba(0, 111, 200, 0.1);
 $grey:#DEDEDE;
 $red: #ff0000;
+$black: #000000;
+$black-1: #333333;
+$black-2: #5D5D5D;
+$soft-black:rgba(0, 0, 0, 0.1);
+
+
+* {
+    font-family: 'Segoe UI',
+}
 
 .button-black-5OdQu2e8mwr {
-    background-color: #333333;
+    background-color: $black-1;
 }
 
 .button-blue-1iGRM5hHmwr {
-    background-color: #006fc8;
+    background-color: $blue;
 }
 
-.background-black-01{
-    background-color: rgba(0, 0, 0, 0.1);
+.background-black-01 {
+    background-color: $soft-black;
 }
 
 .p-0 {

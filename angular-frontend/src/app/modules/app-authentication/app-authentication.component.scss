@@ -1,16 +1,21 @@
 @import '~src/assets/style/styles-shared';
+
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
     .box-left {
         background-color: $blue;
         width: 100%;
+
         .wrapper-box-left {
             .box-header {
                 align-items: center;
+                color: $black;
                 display: flex;
                 flex-direction: column;
+
                 p {
                     color: $white;
                     font-weight: normal;
@@ -21,6 +26,7 @@
             }
         }
     }
+
     .box-right {
         background-color: var(--gray-light3);
         display: flex;
@@ -33,6 +39,7 @@
 @media screen and (min-width:1080px) {
     .container {
         flex-direction: row;
+
         .box-right {
             flex: 1 0 320px;
         }

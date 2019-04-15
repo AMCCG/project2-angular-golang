@@ -1,0 +1,53 @@
+<section>
+  <div class="wrapper-box-right">
+    <div class="box-form">
+      <div class="box-header">
+        <p>Register</p>
+      </div>
+      <div class="box-body">
+        <div class="login-page">
+          <div class="login-form">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="wrapper-form-input">
+                <div class="control">
+                  <input type="email" formControlName="email" placeholder="Email" appValidateInput>
+                </div>
+                <div>
+                  <input type="password" formControlName="password" placeholder="Password">
+                </div>
+                <div>
+                  <input type="text" formControlName="firstName" placeholder="First name">
+                </div>
+                <div>
+                  <input type="text" formControlName="lastName" placeholder="Last name">
+                </div>
+                <div class="selector">
+                  <label for="">Date of birth</label>
+                  <div #dob class="dob">
+                    <div appSelect [data]="month" [default]="'Month'" [style]="'width:125px;'"
+                      (change)="setMonth($event)"></div>
+                    <div appSelect [data]="day" [default]="'Day'" (change)="setDate($event)"></div>
+                    <div appSelect [data]="year" [default]="'Year'" (change)="setYear($event)"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper-form-button">
+                <div class="submit">
+                  <!-- <button [disabled]="!registerForm.valid">Sign In</button> -->
+                  <button>Sign In</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-service">
+      <div class="">
+        <ul class="p-0">
+          <li>© 2019 AMCCG</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,5 @@
 @import '~src/app/modules/app-authentication/app-authentication.component';
+
 section {
     background-color: var(--gray-light3);
     display: flex;
@@ -7,21 +8,25 @@ section {
     padding: 0;
     width: 320px;
     height: 100%;
+
     .wrapper-box-right {
         display: flex;
         flex: 1 0 auto;
         flex-direction: column;
         justify-content: space-between;
         max-width: 320px;
+
         .box-form {
             display: flex;
             flex-direction: column;
             flex: 1 0 auto;
             justify-content: space-between;
+
             .box-body {
                 .login-button {
                     display: flex;
                     flex-direction: column;
+
                     a {
                         box-sizing: border-box;
                         color: $white;
@@ -29,16 +34,20 @@ section {
                         margin-top: 10px;
                         padding: 10px 12px 10px 16px;
                         width: 100%;
+
                         div {
                             display: flex;
+
                             .icon-small {
                                 height: 20px;
                                 width: 20px;
                             }
+
                             span {
                                 font-size: 12px;
                                 line-height: 20px;
                                 padding-left: 8px;
+
                                 span {
                                     font-size: 14px;
                                     font-weight: 500;
@@ -47,8 +56,10 @@ section {
                             }
                         }
                     }
+
                     .button-group {
                         display: flex;
+
                         a {
                             div {
                                 svg {
@@ -56,14 +67,17 @@ section {
                                 }
                             }
                         }
+
                         a:nth-child(2) {
                             margin-left: 10px;
                         }
                     }
                 }
+
                 .login-space {
                     position: relative;
                     text-align: center;
+
                     .line {
                         position: absolute;
                         background-color: $grey;
@@ -72,6 +86,7 @@ section {
                         right: 0;
                         top: 50%;
                     }
+
                     div {
                         background-color: $white;
                         display: inline-block;
@@ -80,24 +95,30 @@ section {
                         position: relative;
                     }
                 }
+
                 .login-form {
                     display: flex;
+
                     form {
                         width: 100%;
                     }
+
                     .wrapper-form-input {
                         div {
                             padding: 10px 0;
                             display: flex;
+
                             input {
                                 background-color: $white;
                                 padding: 10px;
                                 width: 100%;
                             }
+
                             .alert {
                                 background-color: #FFF1F0;
                                 color: $red;
                                 width: 100%;
+
                                 div {
                                     font-size: 12px;
                                     margin: auto;
@@ -106,15 +127,18 @@ section {
                             }
                         }
                     }
+
                     .wrapper-form-button {
                         align-content: center;
                         display: flex;
                         justify-content: space-between;
+
                         .forgot-password {
                             color: $blue;
                             cursor: pointer;
                             font-size: 12px;
                         }
+
                         .submit {
                             button {
                                 background-color: $blue;
@@ -122,13 +146,16 @@ section {
                                 border-radius: 2px;
                                 cursor: pointer;
                                 color: $white;
+                                font-size: 14px;
                                 font-weight: bold;
                                 padding: 10px;
+                                min-width: 100px;
                             }
                         }
                     }
                 }
             }
+
             .box-footer {
                 a {
                     cursor: pointer;
@@ -137,16 +164,19 @@ section {
                     font-size: 12px;
                     text-decoration: none;
                     line-height: 20px;
+
                     svg {
                         fill: $blue;
                     }
                 }
             }
         }
+
         .box-service {
             list-style: none;
             padding: 0;
             text-align: center;
+
             li {
                 display: inline-block;
                 font-size: 10px;

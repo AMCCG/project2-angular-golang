@@ -1,0 +1,41 @@
+@import '~src/app/modules/app-authentication/app-login/app-login.component';
+
+section .wrapper-box-right .box-form {
+    justify-content: unset;
+
+    .wrapper-form-input {
+        .control{
+           position: relative;
+        }
+        .selector {
+            flex-direction: column;
+
+            label {
+                font-size: 12px;
+                color: $black-1;
+            }
+
+            .dob {
+                justify-content: space-between;
+                padding: 0px;
+
+                div:nth-child(1) {
+                    flex-grow: 2;
+                }
+
+                div:nth-child(2) {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+
+    .wrapper-form-button {
+        flex-direction: row-reverse;
+
+        button:disabled {
+            cursor: auto;
+            opacity: .5;
+        }
+    }
+}

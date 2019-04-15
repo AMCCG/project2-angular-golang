@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShareModule } from '../share-modules/share.module';
 import { AppAuthenticationComponent } from './app-authentication.component';
 import { AppLoginComponent } from './app-login/app-login.component';
+import { AppRegisterComponent } from './app-register/app-register.component';
+import { SelectDirective } from './directives/select.directive';
+import { ValidateInputDirective } from './directives/validate-input.directive';
 
 const routes: Routes = [
 
@@ -12,7 +15,8 @@ const routes: Routes = [
   {
     path: '', component: AppAuthenticationComponent, children: [
       { path: 'login', component: AppLoginComponent },
-    ]
+      { path: 'create-account', component: AppRegisterComponent },
+    ],
   },
 ];
 
@@ -20,6 +24,9 @@ const routes: Routes = [
   declarations: [
     AppAuthenticationComponent,
     AppLoginComponent,
+    AppRegisterComponent,
+    SelectDirective,
+    ValidateInputDirective,
   ],
   imports: [
     RouterModule.forChild(routes),
